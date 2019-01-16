@@ -1,8 +1,6 @@
 /* FONT IMPORTS */
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-
 .icon {
   font-family: 'Material Icons', serif;
   font-style: normal;
@@ -14,16 +12,13 @@
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
 }
 
-
 /* VARIABLES */
-
 :root {
   --main-color: #BF272D;
   --text-color: #777;
@@ -33,9 +28,7 @@
   --neutral-color: #fff;
 }
 
-
 /* GENERAL */
-
 * {
   box-sizing: border-box;
 }
@@ -57,9 +50,7 @@ main {
   max-width: 50em;
 }
 
-
 /* GRID */
-
 .row {
   margin: 0;
   padding: 0;
@@ -94,9 +85,7 @@ main {
   text-align: right;
 }
 
-
 /* Calendar */
-
 .calendar {
   display: block;
   position: relative;
@@ -149,7 +138,6 @@ main {
   transition: 0.25s ease-out;
 }
 
-
 .calendar .body .selected {
   border-left: 10px solid transparent;
   border-image: linear-gradient(45deg, #BF272D 0%, #bfa400 40%);
@@ -168,37 +156,31 @@ main {
   border-right: none;
 }
 
-.calendar .body .cell {
-  .number {
-    position: relative;
-    font-size: 82.5%;
-    line-height: 1;
-    font-weight: 700;
-    text-align: right;
-    margin: 5px 5px 10px 5px;
-    z-index: 1;
-
-    &:after {
-      content: '';
-      display: block;
-      width: calc(100% + 10px);
-      height: 25px;
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      background-color: #eee;
-      z-index: -1;
-    }
-  }
-
-  button {
-    margin: 5px 5px 0 5px;
-
-    &:last-child {
-      margin: 5px;
-    }
-  }
-
+.calendar .body .cell .number {
+  position: relative;
+  font-size: 82.5%;
+  line-height: 1;
+  font-weight: 700;
+  text-align: right;
+  margin: 5px 5px 10px 5px;
+  z-index: 1;
+}
+.calendar .body .cell .number:after {
+  content: '';
+  display: block;
+  width: calc(100% + 10px);
+  height: 25px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background-color: #eee;
+  z-index: -1;
+}
+.calendar .body .cell button {
+  margin: 5px 5px 0 5px;
+}
+.calendar .body .cell button:last-child {
+  margin: 5px;
 }
 
 .calendar .body .disabled {
@@ -219,7 +201,7 @@ main {
   letter-spacing: -.07em;
 }
 
-.calendar .body .cell:hover .bg, .calendar .body .selected .bg  {
+.calendar .body .cell:hover .bg, .calendar .body .selected .bg {
   opacity: 0.05;
   transition: .5s ease-in;
 }
